@@ -1,0 +1,13 @@
+### create board
+
+POST http://localhost:3000/boards
+Content-Type: application/json
+
+{
+    "title": "하하",
+    "description": "test"
+}
+
+### get board
+
+GET http://localhost:3000/boards
