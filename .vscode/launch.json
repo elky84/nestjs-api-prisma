@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Nest.js Debug",
+        "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nest",
+        "args": [
+          "start",
+          "--debug",
+          "--watch"
+        ],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "restart": true,
+        "stopOnEntry": false,
+        "localRoot": "${workspaceFolder}",
+        "remoteRoot": null,
+        "outFiles": [
+          "${workspaceFolder}/dist/**/*.js"
+        ],
+        "sourceMaps": true
+      }
+    ]
+  }
+  
