@@ -6,6 +6,8 @@ import {
   Body,
   Put,
   Delete,
+  Res,
+  Header,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { PostService } from './post.service';
@@ -67,6 +69,19 @@ export class AppController {
     @Body() userData: { name?: string; email: string },
   ): Promise<UserModel> {
     return this.userService.createUser(userData);
+  }
+
+  @Get('user')
+  async users(
+  ): Promise<UserModel[]> {
+    return this.userService.users({});
+  }
+
+  @Get('user/excel')
+  @Header('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+  @Header('Content-Disposition', 'attachment; filename=users.xlsx')
+  async userExcel(@Res() res) {
+    res.end(await this.userService.usersExcel({}))
   }
 
   @Put('publish/:id')

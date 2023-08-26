@@ -1,0 +1,18 @@
+### user create
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "email": "elky84@gmail.com",
+    "name": "elky"
+}
+
+### user list
+
+GET http://localhost:3000/user
+
+
+### user excel - 새창으로 열어야 다운
+
+GET http://localhost:3000/user/excel

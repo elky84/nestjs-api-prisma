@@ -1,10 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from './prisma.service';
 import { User, Prisma } from '@prisma/client';
+import { ExcelService } from './excel.service';
 
 @Injectable()
 export class UserService {
-  constructor(private prisma: PrismaService) {}
+  constructor
+  (
+    private prisma: PrismaService,
+    private excelService: ExcelService,
+  ) 
+  {}
 
   async user(
     userWhereUniqueInput: Prisma.UserWhereUniqueInput,
@@ -13,6 +19,19 @@ export class UserService {
       where: userWhereUniqueInput,
     });
   }
+
+  
+  async usersExcel(params: {
+    skip?: number;
+    take?: number;
+    cursor?: Prisma.UserWhereUniqueInput;
+    where?: Prisma.UserWhereInput;
+    orderBy?: Prisma.UserOrderByWithRelationInput;
+  }): Promise<any> {
+    const users = await this.users(params);
+    return this.excelService.write("users", users)
+  }
+
 
   async users(params: {
     skip?: number;
