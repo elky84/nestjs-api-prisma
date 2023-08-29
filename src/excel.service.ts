@@ -1,11 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { Post, Prisma } from '@prisma/client';
 import * as XLSX from 'xlsx';
 
 @Injectable()
 export class ExcelService {
 
-  async write(sheet, data) {
+  async write(sheet: string, data: any) {
     return new Promise((resolve, reject) => {
       try {
         const wb = XLSX.utils.book_new();
