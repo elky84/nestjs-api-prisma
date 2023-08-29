@@ -29,7 +29,7 @@ export class UserService {
     orderBy?: Prisma.UserOrderByWithRelationInput;
   }): Promise<any> {
     const users = await this.users(params);
-    return this.excelService.write("users", users)
+    return this.excelService.excel("users", users)
   }
 
 

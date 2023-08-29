@@ -10,15 +10,18 @@ specifiers:
   '@prisma/client': ^5.1.1
   '@types/express': ^4.17.17
   '@types/jest': ^29.5.2
+  '@types/moment': ^2.13.0
   '@types/node': ^20.3.1
   '@types/supertest': ^2.0.12
   '@typescript-eslint/eslint-plugin': ^5.59.11
   '@typescript-eslint/parser': ^5.59.11
+  csv-stringify: ^6.4.2
   eslint: ^8.42.0
   eslint-config-prettier: ^8.8.0
   eslint-plugin-prettier: ^4.2.1
   exceljs: ^4.3.0
   jest: ^29.5.0
+  moment: ^2.29.4
   prettier: ^2.8.8
   reflect-metadata: ^0.1.13
   rxjs: ^7.8.1
@@ -36,7 +39,10 @@ dependencies:
   '@nestjs/core': 10.2.1_wxeamgupywos7h66i2kssj73yi
   '@nestjs/platform-express': 10.2.1_3aivuf2jcwvwso5c2274uvcofa
   '@prisma/client': 5.1.1
+  '@types/moment': 2.13.0
+  csv-stringify: 6.4.2
   exceljs: 4.3.0
+  moment: 2.29.4
   reflect-metadata: 0.1.13
   rxjs: 7.8.1
   xlsx: 0.18.5
@@ -1248,6 +1254,13 @@ packages:
     resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==}
     dev: true
 
+  /@types/moment/2.13.0:
+    resolution: {integrity: sha512-DyuyYGpV6r+4Z1bUznLi/Y7HpGn4iQ4IVcGn8zrr1P4KotKLdH0sbK1TFR6RGyX6B+G8u83wCzL+bpawKU/hdQ==}
+    deprecated: This is a stub types definition for Moment (https://github.com/moment/moment). Moment provides its own type definitions, so you don't need @types/moment installed!
+    dependencies:
+      moment: 2.29.4
+    dev: false
+
   /@types/node/14.18.56:
     resolution: {integrity: sha512-+k+57NVS9opgrEn5l9c0gvD1r6C+PtyhVE4BTnMMRwiEA8ZO8uFcs6Yy2sXIy0eC95ZurBtRSvhZiHXBysbl6w==}
     dev: false
@@ -2262,6 +2275,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /csv-stringify/6.4.2:
+    resolution: {integrity: sha512-DXIdnnCUQYjDKTu6TgCSzRDiAuLxDjhl4ErFP9FGMF3wzBGOVMg9bZTLaUcYtuvhXgNbeXPKeaRfpgyqE4xySw==}
+    dev: false
 
   /dayjs/1.11.9:
     resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==}
@@ -4062,6 +4079,10 @@ packages:
     hasBin: true
     dependencies:
       minimist: 1.2.8
+
+  /moment/2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
+    dev: false
 
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}

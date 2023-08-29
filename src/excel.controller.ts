@@ -46,6 +46,13 @@ export class ExcelController {
   @Header('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
   @Header('Content-Disposition', 'attachment; filename=users.xlsx')
   async makeExcel(@Res() res) {
-    res.end(await this.excelService.write('연락처', this.users));
+    res.end(await this.excelService.excel('contact', this.users));
+  }
+
+  @Get('csv')
+  @Header('Content-Type', 'text/csv')
+  @Header('Content-Disposition', 'attachment; filename=users.csv')
+  async makeCsv(@Res() res) {
+    res.end(await this.excelService.csv(this.users));
   }
 }

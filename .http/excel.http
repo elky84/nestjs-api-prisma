@@ -1,3 +1,7 @@
-### excel - 새창으로 열어야 다운
+### excel 
 
 GET http://localhost:3000/excel
+
+### csv
+
+GET http://localhost:3000/excel/csv
